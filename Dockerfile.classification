@@ -6,7 +6,7 @@ COPY . /app
 
 RUN apt-get update
 RUN apt-get install -y python3-pip
-RUN pip3 install -r ./Deployment/Requirements.txt
+RUN pip install -r ./Deployment/Requirements.txt
 
 
 CMD streamlit run ./Deployment/api.py
