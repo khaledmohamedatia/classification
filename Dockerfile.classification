@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN sudo su
 RUN apt-get update
 RUN apt-get install -y python3-pip
 RUN pip install -r ./Deployment/Requirements.txt
