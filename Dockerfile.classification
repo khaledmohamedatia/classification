@@ -2,10 +2,11 @@ FROM ubuntu
 
 WORKDIR /app
 
+COPY . /app
+
 RUN apt-get update
 RUN apt-get install -y python3-pip
 RUN pip3 install -r ./Deployment/Requirements.txt
 
-COPY . /app
 
 CMD streamlit run ./Deployment/api.py
