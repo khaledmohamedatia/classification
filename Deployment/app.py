@@ -50,7 +50,7 @@ try:
         img = preprocess(image)
 
         model = model_arc()
-        model.load_weights("/home/khlaed/Videos/Garbage_Segregation-main/weights/model.h5")
+        model.load_weights("../weights/model.h5")
 
         prediction = model.predict(img[np.newaxis, ...])
         st.info('Hey! The uploaded image has been classified as " {} waste " '.format(labels[np.argmax(prediction[0], axis=-1)]))

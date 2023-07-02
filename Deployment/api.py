@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # Load the model and labels
 model = model_arc()
-model.load_weights("weights/model.h5")
+model.load_weights("../weights/model.h5")
 labels = gen_labels()
 
 logging.basicConfig(level=logging.INFO)
