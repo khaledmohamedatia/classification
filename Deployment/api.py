@@ -59,4 +59,4 @@ def predictImage():
     # return jsonify({'label': 'test'})
 
 if __name__ == '__main__':
-    app.run(port=9055)
+    app.run(port=8501)
