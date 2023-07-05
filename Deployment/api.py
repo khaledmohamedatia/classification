@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify 
+from flask_cors import CORS
 from PIL import Image
 import numpy as np
 import urllib.request
@@ -7,6 +8,9 @@ from utils import *
 import logging
 
 app = Flask(__name__)
+CORS(app)
+CORS(app, origins='*',
+     methods=['POST'])
 
 # Load the model and labels
 model = model_arc()
